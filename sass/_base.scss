@@ -1,10 +1,10 @@
 // COLOR VARIABLES
-$color-primary: #005792;
+$color-primary: #0097e6;
 $color-primary-dark: #13334c;
 
-$color-secondary: #fd5f00;
+$color-secondary: #273c75;
 
-$color-grey-light-1: #f6f6e9;
+$color-grey-light-1: #f5f6fa;
 $color-grey-light-2: #aaa;
 
 $color-grey-dark-1: #54483A;
@@ -45,15 +45,11 @@ body {
 }
 
 .container {
-    background-color: #f6f6e9;
+    background-color: #dcdde1;
     display: grid;
-    grid-template-rows: 50vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: 6rem 50vh min-content 40vw repeat(3, min-content);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,
     [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-
-    @media only screen and (max-width: $bp-large) {
-        
-    }
 
     @media only screen and (max-width: $bp-medium) {
         grid-template-rows: 6rem calc(100vh - 6rem); // min-content * 6 implicit grid
