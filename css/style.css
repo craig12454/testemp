@@ -19,9 +19,9 @@ body {
   line-height: 1.6; }
 
 .container {
-  background-color: #dcdde1;
+  background-color: #e2e2e2;
   display: grid;
-  grid-template-rows: 10vh 50vh min-content 40vw repeat(3, min-content);
+  grid-template-rows: 10vh 34vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 50em) {
     .container {
@@ -90,17 +90,13 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 2rem;
   align-items: center; }
-  .navigation__bg {
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    background-color: #273c75; }
   .navigation__title {
     font-size: 6rem;
-    color: #f5f6fa;
+    color: #273c75;
     display: grid;
     grid-gap: 0.2em; }
   .navigation__sub {
-    color: #f5f6fa; }
+    color: #273c75; }
   .navigation__list {
     list-style: none;
     display: grid;
@@ -108,77 +104,59 @@ body {
     grid-gap: 2em; }
   .navigation__link:link, .navigation__link:visited {
     font-size: 2rem;
-    color: #f5f6fa;
+    color: #273c75;
     text-decoration: none;
     font-family: "Space Mono", monospace;
     text-align: center;
     padding: 0;
     display: block;
+    transition: all .2s;
+    border-bottom: 1px solid #0097e6;
     transition: all .2s; }
-  .navigation__link:hover, .navigation__link:active {
+  .navigation__link:hover {
+    background-color: #0097e6;
+    color: #f5f6fa;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px); }
+  .navigation__link:active {
     background-color: rgba(255, 255, 255, 0.2); }
 
 .header {
   grid-row: 2 / 3;
   grid-column: 1 / -1;
-  height: 50vh;
-  background-image: url(../img/power-tool-outside.jpg);
+  background-image: linear-gradient(rgba(39, 60, 117, 0.73), rgba(39, 60, 117, 0.73)), url(../img/power-tool-outside.jpg);
+  -webkit-box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px 0px 15px -4px rgba(0, 0, 0, 0.75);
   background-size: cover;
-  background-position: center;
-  filter: blur(1px); }
+  background-position: center; }
 
 .homes {
   grid-column: center-start / center-end;
   margin: 7rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   grid-gap: 7em; }
 
 .home {
   background-color: #f5f6fa;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: transform .3s;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-row-gap: 3.5rem; }
+  justify-items: center; }
   .home__img {
-    width: 100%;
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    z-index: 1; }
-  .home__like {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    fill: #0097e6;
-    height: 2.5rem;
-    width: 2.5rem;
-    z-index: 2;
-    justify-self: end;
-    margin: 1rem; }
+    width: 100%; }
   .home__name {
-    grid-row: 1 / 2;
-    grid-column: 1 / -1;
-    justify-self: center;
-    align-self: end;
     z-index: 3;
-    width: 80%;
+    width: 100%;
     font-family: "Space Mono", monospace;
     font-size: 1.6rem;
     text-align: center;
     padding: 1.25rem;
-    background-color: #273c75;
-    color: #fff;
-    font-weight: 400;
-    transform: translateY(50%); }
-  .home__location, .home__rooms {
-    margin-top: 2.5rem; }
-  .home__location, .home__rooms, .home__area, .home__price {
-    font-size: 1.5rem;
-    margin-left: 2rem;
-    display: flex;
-    align-items: center; }
-    .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
-      fill: #0097e6;
-      height: 2rem;
-      width: 2rem;
-      margin-right: 1rem; }
-  .home__btn {
-    grid-column: 1 / -1; }
+    background-color: #f5f6fa;
+    color: #273c75;
+    font-weight: 400; }
+  .home:hover {
+    transform: translateY(-1.5rem) scale(1.03); }
