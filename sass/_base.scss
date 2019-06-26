@@ -1,11 +1,12 @@
 // COLOR VARIABLES
-$color-primary: #0097e6;
-$color-primary-dark: #13334c;
+$color-primary: #f9f7f7;
+$color-primary-dark: #dbe2ef;
 
-$color-secondary: #273c75;
+$color-secondary: #3f72af;
+$color-secondary-dark: #112d4e;
 
-$color-grey-light-1: #f5f6fa;
-$color-grey-light-2: #aaa;
+$color-grey-light-1: #f2f3f3;
+$color-grey-light-2: #ecf0f1;
 
 $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
@@ -45,9 +46,9 @@ body {
 }
 
 .container {
-    background-color: #e2e2e2;
+    background-color: $color-primary-dark;
     display: grid;
-    grid-template-rows: 10vh 34vh min-content 40vw repeat(3, min-content);
+    grid-template-rows: 10vh min-content 40vw min-content;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,
     [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
