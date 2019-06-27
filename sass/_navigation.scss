@@ -23,7 +23,12 @@
 
     &__sub {
         color: $color-secondary;
+        @media only screen and (max-width: 500px) {
+            display: none;
+        }
     }
+
+
 
     &__list {
         list-style: none;
@@ -47,12 +52,152 @@
     }
 
     &__link:hover {
-        background-color: $color-secondary;
+        background-color: $color-secondary-dark;
         color: $color-primary-dark;
         box-shadow: 0 1rem 2rem rgba(#000, .15);
         transform: translateY(-2px);
     }
     &__link:active {
         background-color: rgba(#fff, .20);
+    } 
+
+    &__checkbox,
+    &__icon,
+    &__background,
+    &__button {
+        display: none;
     }
+
+    @media only screen and (max-width: 1000px) {
+        &__button {
+            display: block;
+            background-color: $color-secondary-dark;
+            height: 7rem;
+            width: 7rem;
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            border-radius: 50%;
+            z-index: 2000;
+            box-shadow: 0 1rem 3rem rgba(#000, .1);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        &__background {
+            display: block;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            position: fixed;
+            top: 2.5rem;
+            right: 2.5rem;
+            background-image: radial-gradient($color-secondary, $color-secondary-dark);
+            z-index: 1000;
+            transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+        }
+
+        &__icon {
+            display: inline-block;
+            position: relative;
+            margin-top: 3.5rem;
+    
+            &,
+            &::before,
+            &::after {
+                width: 3rem;
+                height: 2px;
+                background-color: $color-primary;
+                display: inline-block;
+            }
+    
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transition: all .2s;
+            }
+    
+            &::before { top: -.8rem; }
+            &::after { top: .8rem; }
+        }
+    
+        &__checkbox:checked ~ &__background {
+            transform: scale(80);
+        }
+    
+        &__checkbox:checked ~ &__nav {
+            opacity: 1;
+            width: 100%;
+        }
+
+        &__nav {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1500;
+            opacity: 0;
+            width: 0;
+            transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 100%;
+        }
+    
+        &__item {
+            margin: 1rem;
+        }
+    
+        &__link {
+            &:link,
+            &:visited {
+                font-size: 3rem;
+                padding: 1rem 2rem;
+                color: $color-white;
+                transition: all .4s;
+                border-bottom: 1px solid $color-secondary-dark;
+            }
+
+            &:hover {
+                background-color: $color-secondary-dark;
+            }
+        }
+
+        &__button:hover &__icon::before {
+            top: -1rem;
+        }
+    
+        &__button:hover &__icon::after {
+            top: 1rem;
+        }
+    
+        &__checkbox:checked + &__button &__icon {
+            background-color: transparent;
+        }
+    
+        &__checkbox:checked + &__button &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+    
+        &__checkbox:checked + &__button &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);        
+        }
+
+    }
+
+   
 }

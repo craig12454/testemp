@@ -11,6 +11,8 @@ $color-grey-light-2: #ecf0f1;
 $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
 
+$color-white: #fff;
+
 // FONT VARIABLES
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Space Mono', monospace;
@@ -48,11 +50,7 @@ body {
 .container {
     background-color: $color-primary-dark;
     display: grid;
-    grid-template-rows: 10vh min-content 40vw min-content;
+    grid-template-rows: 10rem min-content min-content min-content;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,
     [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-
-    @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 6rem calc(100vh - 6rem); // min-content * 6 implicit grid
-    }
 }
