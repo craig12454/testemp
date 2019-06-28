@@ -83,24 +83,44 @@ body {
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
-  height: 80rem;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
-  .about__text--testemp, .about__text--shinko {
-    color: #3f72af;
+  grid-template-columns: 1fr;
+  grid-gap: 7rem;
+  margin: 7rem 0;
+  align-items: center; }
+  .about__testemp, .about__shinko, .about__brainchild {
+    height: 25vh;
+    background-color: rgba(17, 45, 78, 0.9);
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    @media only screen and (max-width: 900px) {
+      .about__testemp, .about__shinko, .about__brainchild {
+        grid-template-columns: 1fr; } }
+  .about__text {
+    color: #fff;
     font-size: 1.7rem;
-    padding: 2rem; }
-  .about__logo {
-    justify-self: start; }
+    padding: 2rem;
+    margin: 2rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .about__logo,
+  .about .shinko__logo {
+    justify-self: center;
+    align-self: center; }
+  .about__title {
+    justify-self: center;
+    align-self: center;
+    font-size: 3rem;
+    font-family: "Space Mono", monospace;
+    color: #f9f7f7; }
   .about__bg {
-    background-image: linear-gradient(rgba(63, 114, 175, 0.73), rgba(63, 114, 175, 0.73)), url(../img/dark-warehouse.jpg);
+    z-index: -100;
+    background-image: linear-gradient(rgba(63, 114, 175, 0.73), rgba(63, 114, 175, 0.73)), url(../img/power-tool-outside.jpg);
     background-size: cover;
     background-position: center;
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
     grid-column: 1 / -1; }
+  @media only screen and (max-width: 900px) {
+    .about .shinko_logo {
+      grid-row: 1 / 2; } }
 
 .navigation {
   grid-row: 1 / 2;
@@ -131,7 +151,7 @@ body {
     grid-gap: 2em; }
   .navigation__link:link, .navigation__link:visited {
     font-size: 2rem;
-    color: #3f72af;
+    color: #112d4e;
     text-decoration: none;
     font-family: "Space Mono", monospace;
     text-align: center;

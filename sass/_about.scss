@@ -2,29 +2,63 @@
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 5rem;
-    height: 80rem;
+    grid-template-columns: 1fr;
+    grid-gap: 7rem;
+    margin: 7rem 0;
     align-items: center;
-    background-color: rgba($color-white, 0.7);
-    box-shadow: 0 1.5rem 4rem rgba(#000, .15);
+    //box-shadow: 0 1.5rem 4rem rgba(#000, .15);
 
-    &__text--testemp,
-    &__text--shinko {
-        color: $color-secondary;
-        font-size: 1.7rem;
-        padding: 2rem;
+    &__testemp,
+    &__shinko,
+    &__brainchild {
+        height: 25vh;
+        background-color: rgba($color-secondary-dark, 0.90);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media only screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+        }
     }
 
-    &__logo {
-        justify-self: start;
+    &__text {
+        color: $color-white;
+        font-size: 1.7rem;
+        padding: 2rem;
+        margin: 2rem;
+        box-shadow: 0 1.5rem 4rem rgba(#000, .40);
+        //border-color: $color-secondary-dark;
+        //border-style: solid;
+        //border-width: 1px 0 1px 0;
+    }
+
+    &__logo,
+    .shinko__logo {
+        justify-self: center;
+        align-self: center;
+    }
+
+
+    &__title {
+        justify-self: center;
+        align-self: center;
+        font-size: 3rem;
+        font-family: $font-display;
+        color: $color-primary;
     }
 
     &__bg {
-        background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/dark-warehouse.jpg);
+        z-index: -100;
+        background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/power-tool-outside.jpg);
         background-size: cover;
         background-position: center;
-        grid-row: 2 / 3;
+        grid-row: 2 / 4;
         grid-column: 1 / -1;
+    }
+
+    @media only screen and (max-width: 900px){
+        .shinko_logo {
+            grid-row: 1 / 2;
+        }
     }
 }
