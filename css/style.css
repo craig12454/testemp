@@ -137,9 +137,11 @@ body {
     box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.75); }
   .navigation__title {
     font-size: 6rem;
-    color: #112d4e;
     display: grid;
     grid-gap: 0.2em; }
+  .navigation__logo {
+    text-decoration: none;
+    color: #112d4e; }
   .navigation__sub {
     color: #3f72af; }
     @media only screen and (max-width: 500px) {
