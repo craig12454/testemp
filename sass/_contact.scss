@@ -1,4 +1,4 @@
-.about {
+.contact {
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
     display: grid;
@@ -8,58 +8,56 @@
     align-items: center;
     //box-shadow: 0 1.5rem 4rem rgba(#000, .15);
 
-    &__testemp,
-    &__shinko,
-    &__brainchild {
-        min-height: 30rem;
-        background-color: rgba($color-secondary-dark, 0.90);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    
 
-        @media only screen and (max-width: 900px) {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    &__text {
-        color: $color-white;
+    &__details,
+    &__company,
+    &__opening {
+        border-radius: 2px;
+        box-shadow: 0 1.5rem 4rem rgba(#000, .40);
         font-size: 1.7rem;
         padding: 2rem;
-        margin: 2rem;
-        box-shadow: 0 1.5rem 4rem rgba(#000, .40);
-        //border-color: $color-secondary-dark;
-        //border-style: solid;
-        //border-width: 1px 0 1px 0;
+        color: $color-white;
+        background-color: rgba($color-secondary-dark, 0.90);
     }
 
-    &__logo,
-    .shinko__logo {
-        justify-self: center;
-        align-self: center;
-        padding: 2rem;
-    }
-
-
-    &__title {
-        justify-self: center;
-        align-self: center;
-        font-size: 3rem;
-        font-family: $font-display;
-        color: $color-primary;
+    &__header {
+        margin-bottom: 1rem;
+        text-align: center;
     }
 
     &__bg {
         z-index: -100;
-        background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/power-tool-outside.jpg);
+        background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/dark-warehouse.jpg);
         background-size: cover;
         background-position: center;
         grid-row: 2 / 4;
         grid-column: 1 / -1;
     }
 
-    @media only screen and (max-width: 900px){
-        .shinko_logo {
-            grid-row: 1 / 2;
+    @media only screen and (min-width: 900px){
+        grid-template-columns: 1fr 1fr;
+        &__opening {
+            grid-column: span 2;
+        }
+
+        .map-responsive {
+            grid-column: span 2;
         }
     }
+}
+
+.map-responsive{
+    box-shadow: 0 1.5rem 4rem rgba(#000, .40);
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
