@@ -88,7 +88,7 @@ body {
   margin: 7rem 0;
   align-items: center; }
   .about__testemp, .about__shinko, .about__brainchild {
-    height: 25vh;
+    min-height: 30rem;
     background-color: rgba(17, 45, 78, 0.9);
     display: grid;
     grid-template-columns: 1fr 1fr; }
@@ -104,7 +104,8 @@ body {
   .about__logo,
   .about .shinko__logo {
     justify-self: center;
-    align-self: center; }
+    align-self: center;
+    padding: 2rem; }
   .about__title {
     justify-self: center;
     align-self: center;
