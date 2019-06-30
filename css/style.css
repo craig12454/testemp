@@ -128,7 +128,7 @@ body {
   grid-row: 1 / 2;
   grid-column: center-start / center-end;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 2rem;
   align-items: center; }
   .navigation__bg {
@@ -142,7 +142,8 @@ body {
     grid-gap: 0.2em; }
   .navigation__logo {
     text-decoration: none;
-    color: #112d4e; }
+    color: #112d4e;
+    width: 30rem; }
   .navigation__sub {
     color: #3f72af; }
     @media only screen and (max-width: 500px) {
@@ -295,7 +296,7 @@ body {
   .feature__list {
     list-style: none; }
 
-.homes {
+.products {
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
   margin: 5rem 0;
@@ -303,16 +304,18 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   grid-gap: 4em; }
 
-.home {
+.product {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform .3s;
   display: grid;
   grid-template-rows: 1fr 1fr; }
-  .home__img {
+  .product__img {
+    border-radius: 2px;
     width: 100%;
     grid-row: 1 / -1;
     grid-column: 1 / 2; }
-  .home__name {
+  .product__name {
+    border-radius: 2px;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     align-self: end;
@@ -326,7 +329,7 @@ body {
     clip-path: polygon(100% 50%, 100% 100%, 0 100%, 0 50%, 50% 0%);
     color: #f9f7f7;
     font-weight: 400; }
-  .home:hover {
+  .product:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
 .contact {
@@ -411,3 +414,50 @@ body {
   margin-right: auto;
   text-align: center;
   width: 70%; }
+
+.detail {
+  grid-column: center-start / center-end;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 7rem;
+  margin: 7rem 0;
+  align-items: center; }
+  .detail__details, .detail__company, .detail__opening {
+    border-radius: 2px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    font-size: 1.7rem;
+    padding: 2rem;
+    color: #fff;
+    background-color: rgba(17, 45, 78, 0.9); }
+  .detail__header {
+    margin-bottom: 1rem;
+    text-align: center; }
+  .detail__bg {
+    z-index: -100;
+    background-image: linear-gradient(rgba(63, 114, 175, 0.73), rgba(63, 114, 175, 0.73)), url(../img/dark-warehouse.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-row: 2 / 4;
+    grid-column: 1 / -1; }
+  @media only screen and (min-width: 900px) {
+    .detail {
+      grid-template-columns: 1fr 1fr; }
+      .detail__opening {
+        grid-column: span 2; }
+      .detail .map-responsive {
+        grid-column: span 2; } }
+
+.map-responsive {
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0; }
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute; }

@@ -1,0 +1,63 @@
+.detail {
+    grid-column: center-start / center-end;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 7rem;
+    margin: 7rem 0;
+    align-items: center;
+    //box-shadow: 0 1.5rem 4rem rgba(#000, .15);
+
+    
+
+    &__details,
+    &__company,
+    &__opening {
+        border-radius: 2px;
+        box-shadow: 0 1.5rem 4rem rgba(#000, .40);
+        font-size: 1.7rem;
+        padding: 2rem;
+        color: $color-white;
+        background-color: rgba($color-secondary-dark, 0.90);
+    }
+
+    &__header {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    &__bg {
+        z-index: -100;
+        background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/dark-warehouse.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-row: 2 / 4;
+        grid-column: 1 / -1;
+    }
+
+    @media only screen and (min-width: 900px){
+        grid-template-columns: 1fr 1fr;
+        &__opening {
+            grid-column: span 2;
+        }
+
+        .map-responsive {
+            grid-column: span 2;
+        }
+    }
+}
+
+.map-responsive{
+    box-shadow: 0 1.5rem 4rem rgba(#000, .40);
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}

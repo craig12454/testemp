@@ -1,4 +1,4 @@
-.homes {
+.products {
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
     margin: 5rem 0;
@@ -8,19 +8,21 @@
     grid-gap: 4em;
 }
 
-.home {
+.product {
     box-shadow: 0 1.5rem 4rem rgba(#000, .15);
     transition: transform .3s;
     display: grid;
     grid-template-rows: 1fr 1fr;
         
     &__img {
+        border-radius: 2px;
         width: 100%; 
         grid-row: 1 / -1;
         grid-column: 1 / 2;
     }
 
     &__name {
+        border-radius: 2px;
         grid-row: 2 / 3;
         grid-column: 1 / 2;
         align-self: end;
