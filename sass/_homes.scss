@@ -1,11 +1,11 @@
 .homes {
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
-    margin: 7rem 0;
+    margin: 5rem 0;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 7em;
+    grid-gap: 4em;
 }
 
 .home {
