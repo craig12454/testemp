@@ -1,4 +1,4 @@
-.detail {
+.compression {
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
     display: grid;
@@ -6,19 +6,23 @@
     grid-gap: 7rem;
     margin: 7rem 0;
     align-items: center;
-    //box-shadow: 0 1.5rem 4rem rgba(#000, .15);
 
-    
+    &__feature {
+    }
 
-    &__details,
-    &__company,
+    &__img {
+        width: 100%;
+        border-radius: 2px;
+        justify-self: center;
+    }
+
     &__opening {
         border-radius: 2px;
         box-shadow: 0 1.5rem 4rem rgba(#000, .40);
         font-size: 1.7rem;
         padding: 2rem;
         color: $color-white;
-        background-color: rgba($color-secondary-dark, 0.90);
+        background-color: rgba($color-secondary-dark, 0.73);
     }
 
     &__header {
@@ -36,28 +40,9 @@
     }
 
     @media only screen and (min-width: 900px){
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         &__opening {
             grid-column: span 2;
         }
-
-        .map-responsive {
-            grid-column: span 2;
-        }
     }
-}
-
-.map-responsive{
-    box-shadow: 0 1.5rem 4rem rgba(#000, .40);
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
-}
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
 }
