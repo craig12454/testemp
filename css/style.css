@@ -415,7 +415,7 @@ body {
   text-align: center;
   width: 70%; }
 
-.compression {
+.item {
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
   display: grid;
@@ -423,29 +423,31 @@ body {
   grid-gap: 7rem;
   margin: 7rem 0;
   align-items: center; }
-  .compression__img {
-    width: 100%;
-    border-radius: 2px;
-    justify-self: center; }
-  .compression__opening {
+  .item__img {
+    width: 80%;
+    border-radius: 2px; }
+  .item__opening {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 2rem;
     border-radius: 2px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     font-size: 1.7rem;
     padding: 2rem;
     color: #fff;
     background-color: rgba(17, 45, 78, 0.73); }
-  .compression__header {
+  .item__title {
+    align-self: center;
+    background-color: rgba(17, 45, 78, 0.73);
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4); }
+  .item__header {
     margin-bottom: 1rem;
     text-align: center; }
-  .compression__bg {
+  .item__bg {
     z-index: -100;
     background-image: linear-gradient(rgba(63, 114, 175, 0.73), rgba(63, 114, 175, 0.73)), url(../img/dark-warehouse.jpg);
     background-size: cover;
     background-position: center;
     grid-row: 2 / 4;
     grid-column: 1 / -1; }
-  @media only screen and (min-width: 900px) {
-    .compression {
-      grid-template-columns: 1fr; }
-      .compression__opening {
-        grid-column: span 2; } }

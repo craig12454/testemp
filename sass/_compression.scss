@@ -1,4 +1,4 @@
-.compression {
+.item {
     grid-column: center-start / center-end;
     grid-row: 2 / 3;
     display: grid;
@@ -7,22 +7,28 @@
     margin: 7rem 0;
     align-items: center;
 
-    &__feature {
-    }
-
     &__img {
-        width: 100%;
+        width: 80%;
         border-radius: 2px;
-        justify-self: center;
     }
 
     &__opening {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 2rem;
         border-radius: 2px;
         box-shadow: 0 1.5rem 4rem rgba(#000, .40);
         font-size: 1.7rem;
         padding: 2rem;
         color: $color-white;
         background-color: rgba($color-secondary-dark, 0.73);
+    }
+
+    &__title {
+        align-self: center;
+        background-color: rgba($color-secondary-dark, 0.73);
+        box-shadow: 0 1.5rem 4rem rgba(#000, .40);
     }
 
     &__header {
@@ -40,9 +46,6 @@
     }
 
     @media only screen and (min-width: 900px){
-        grid-template-columns: 1fr;
-        &__opening {
-            grid-column: span 2;
-        }
+        
     }
 }
