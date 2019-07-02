@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #112d4e;
+  color: #dbe2ef;
   font-weight: 300;
   line-height: 1.6; }
 
@@ -23,7 +23,7 @@ html, body {
   height: 100vh; }
 
 .container {
-  background-color: #112d4e;
+  background-color: #dbe2ef;
   display: grid;
   grid-template-rows: 12rem 1fr auto;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }

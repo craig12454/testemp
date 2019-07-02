@@ -40,7 +40,7 @@ html {
 
 body {
     font-family: $font-primary;
-    color: $color-secondary-dark;
+    color: $color-primary-dark;
     font-weight: 300;
     line-height: 1.6;
 }
@@ -50,7 +50,7 @@ html, body {
 }
 
 .container {
-    background-color: $color-secondary-dark;
+    background-color: $color-primary-dark;
     display: grid;
     grid-template-rows: 12rem 1fr auto;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,
