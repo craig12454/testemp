@@ -391,7 +391,7 @@ html, body {
   position: absolute; }
 
 .footer {
-  background-color: #3f72af;
+  background-color: #112d4e;
   grid-column: full-start / full-end;
   grid-row: 4 / 5;
   padding: 8rem; }
@@ -404,7 +404,7 @@ html, body {
   align-items: center; }
   .nav__link:link, .nav__link:visited {
     font-size: 1.4rem;
-    color: #fff;
+    color: #112d4e;
     text-decoration: none;
     font-family: "Space Mono", monospace;
     text-transform: uppercase;
@@ -412,9 +412,8 @@ html, body {
     padding: 1.5rem;
     display: block;
     transition: all .2s;
-    border-bottom: 1px solid #112d4e; }
+    background-color: #dbe2ef; }
   .nav__link:hover, .nav__link:active {
-    background-color: #112d4e;
     transform: translateY(-3px); }
 
 .copyright {

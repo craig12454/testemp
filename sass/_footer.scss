@@ -1,5 +1,5 @@
 .footer {
-    background-color: $color-secondary;
+    background-color: $color-secondary-dark;
     grid-column: full-start / full-end;
     grid-row: 4 / 5;
     padding: 8rem;
@@ -7,7 +7,6 @@
 
 .nav {
     list-style: none;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem;
@@ -16,7 +15,7 @@
     &__link:link,
     &__link:visited {
         font-size: 1.4rem;
-        color: #fff;
+        color: $color-secondary-dark;
         text-decoration: none;
         font-family: $font-display;
         text-transform: uppercase;
@@ -24,12 +23,11 @@
         padding: 1.5rem;
         display: block;
         transition: all .2s;
-        border-bottom: 1px solid $color-secondary-dark;
+        background-color: $color-primary-dark;
     }
 
     &__link:hover,
     &__link:active {
-        background-color: $color-secondary-dark;
         transform: translateY(-3px);
     }
 }
