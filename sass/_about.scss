@@ -17,7 +17,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: $bp-medium) {
             grid-template-columns: 1fr;
         }
     }
@@ -52,16 +52,14 @@
 
     &__bg {
         z-index: -100;
-        background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/power-tool-outside.jpg);
+        background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/power-tool-outside-small.jpg);
         background-size: cover;
         background-position: center;
         grid-row: 2 / 4;
         grid-column: 1 / -1;
-    }
 
-    @media only screen and (max-width: 900px){
-        .shinko_logo {
-            grid-row: 1 / 2;
+        @media (min-resolution: 192dpi) and (min-width: $bp-small) {
+            background-image: linear-gradient(rgba($color-secondary, .73), rgba($color-secondary, .73)), url(../img/power-tool-outside.jpg);
         }
     }
 }
