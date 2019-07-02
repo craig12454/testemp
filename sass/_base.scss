@@ -8,9 +8,6 @@ $color-secondary-dark: #112d4e;
 $color-grey-light-1: #f2f3f3;
 $color-grey-light-2: #ecf0f1;
 
-$color-grey-dark-1: #54483A;
-$color-grey-dark-2: #6D5D4B;
-
 $color-white: #fff;
 
 // FONT VARIABLES
@@ -43,7 +40,7 @@ html {
 
 body {
     font-family: $font-primary;
-    color: $color-grey-dark-2;
+    color: $color-secondary;
     font-weight: 300;
     line-height: 1.6;
 }
