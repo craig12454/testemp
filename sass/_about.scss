@@ -10,6 +10,7 @@
     &__testemp,
     &__shinko,
     &__brainchild {
+        height: 100%;
         border-radius: 2px;
         background-color: rgba($color-secondary-dark, 0.90);
         display: grid;
@@ -33,7 +34,7 @@
     .shinko__logo {
         justify-self: center;
         align-self: center;
-        padding: 2rem;
+        padding: 2rem .5rem;
     }
 
 
@@ -41,7 +42,7 @@
         justify-self: center;
         align-self: center;
         font-size: 3rem;
-        padding: 2rem;
+        padding: 2rem 0.5rem;
         font-family: $font-display;
         color: $color-primary;
     }
