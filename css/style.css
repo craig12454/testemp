@@ -23,7 +23,7 @@ html, body {
   height: 100vh; }
 
 .container {
-  background-color: #dbe2ef;
+  background-color: #112d4e;
   display: grid;
   grid-template-rows: 12rem 1fr auto;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
@@ -331,7 +331,7 @@ html, body {
     font-size: 1.6rem;
     text-align: center;
     padding: 1.25rem;
-    background-color: #112d4e;
+    background-color: #3f72af;
     clip-path: polygon(100% 50%, 100% 100%, 0 100%, 0 50%, 50% 0%);
     color: #f9f7f7;
     font-weight: 400; }

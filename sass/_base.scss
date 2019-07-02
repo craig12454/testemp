@@ -50,7 +50,7 @@ html, body {
 }
 
 .container {
-    background-color: $color-primary-dark;
+    background-color: $color-secondary-dark;
     display: grid;
     grid-template-rows: 12rem 1fr auto;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8,
