@@ -1,0 +1,29 @@
+.construction {
+    grid-column: center-start / center-end;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+    margin: 7rem 0;
+    align-items: center;
+
+    &__testemp,
+    &__shinko,
+    &__brainchild {
+        border-radius: 2px;
+        min-height: 30rem;
+        background-color: rgba(rgb(255, 178, 13), 0.90);
+        display: grid;
+        grid-template-columns: 1fr;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    }
+
+    &__title {
+        justify-self: center;
+        align-self: center;
+        font-size: 4rem;
+        padding: 2rem;
+        font-family: $font-display;
+        color: $color-black;
+    }
+}

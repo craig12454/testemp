@@ -3,6 +3,10 @@
     grid-column: full-start / full-end;
     grid-row: 4 / 5;
     padding: 8rem;
+
+    &__testemp {
+        font-weight: 900;
+    }
 }
 
 .nav {

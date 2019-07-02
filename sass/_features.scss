@@ -38,4 +38,9 @@
     &__list {
         list-style: none;
     }
+
+    &__link {
+        text-decoration: none;
+        color: $color-secondary;
+    }
 }

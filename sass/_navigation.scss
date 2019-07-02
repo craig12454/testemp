@@ -50,7 +50,6 @@
         display: block;
         transition: all .2s;
         border-bottom: 1px solid $color-secondary;
-        transition: all .2s;
     }
 
     &__link:hover {
@@ -202,4 +201,41 @@
     }
 
    
+}
+
+.breadcrumb {
+    display: flex;
+    //justify-content: space-evenly;
+    list-style: none;
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    &__item {
+        font-family: $font-display;
+        font-size: 2rem;
+        color: $color-secondary-dark;
+        font-weight: 600;
+    }
+
+    &__nonlink {
+        border: 1px solid $color-secondary-dark;
+        padding: 0.2rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-decoration: none;
+        color: $color-secondary-dark;
+        padding: 0.2rem;
+    }
+
+    &__link:hover {
+        border-bottom: 1px solid $color-secondary-dark;
+    }
+
+    &__item+&__item:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+    }
 }

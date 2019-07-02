@@ -11,7 +11,7 @@ html {
   font-size: 62.5%; }
   @media only screen and (max-width: 75em) {
     html {
-      font-size: 50%; } }
+      font-size: 55%; } }
 
 body {
   font-family: "Nunito", sans-serif;
@@ -90,7 +90,7 @@ html, body {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
-  margin: 7rem 0;
+  margin: 6rem 0;
   align-items: center; }
   .about__testemp, .about__shinko, .about__brainchild {
     border-radius: 2px;
@@ -170,8 +170,7 @@ html, body {
     padding: 0;
     display: block;
     transition: all .2s;
-    border-bottom: 1px solid #3f72af;
-    transition: all .2s; }
+    border-bottom: 1px solid #3f72af; }
   .navigation__link:hover {
     background-color: #112d4e;
     color: #dbe2ef;
@@ -272,6 +271,53 @@ html, body {
       top: 0;
       transform: rotate(-135deg); } }
 
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  grid-column: 1 / -1;
+  justify-self: center; }
+  .breadcrumb__item {
+    font-family: "Space Mono", monospace;
+    font-size: 2rem;
+    color: #112d4e;
+    font-weight: 600; }
+  .breadcrumb__nonlink {
+    border: 1px solid #112d4e;
+    padding: 0.2rem; }
+  .breadcrumb__link:link, .breadcrumb__link:visited {
+    text-decoration: none;
+    color: #112d4e;
+    padding: 0.2rem; }
+  .breadcrumb__link:hover {
+    border-bottom: 1px solid #112d4e; }
+  .breadcrumb__item + .breadcrumb__item:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0"; }
+
+.construction {
+  grid-column: center-start / center-end;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+  margin: 7rem 0;
+  align-items: center; }
+  .construction__testemp, .construction__shinko, .construction__brainchild {
+    border-radius: 2px;
+    min-height: 30rem;
+    background-color: rgba(255, 178, 13, 0.9);
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+  .construction__title {
+    justify-self: center;
+    align-self: center;
+    font-size: 4rem;
+    padding: 2rem;
+    font-family: "Space Mono", monospace;
+    color: #000; }
+
 .features {
   grid-column: center-start / center-end;
   grid-row: 3 / 4;
@@ -302,14 +348,17 @@ html, body {
     font-size: 1.7rem; }
   .feature__list {
     list-style: none; }
+  .feature__link {
+    text-decoration: none;
+    color: #3f72af; }
 
 .products {
   grid-column: center-start / center-end;
   grid-row: 2 / 3;
-  margin: 5rem 0;
+  margin: 6rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-gap: 4em; }
+  grid-gap: 2em; }
 
 .product {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -339,7 +388,7 @@ html, body {
   .product__link {
     text-decoration: none; }
   .product:hover {
-    transform: translateY(-1.5rem) scale(1.03); }
+    transform: translateY(-0.2rem) scale(1.03); }
 
 .contact {
   grid-column: center-start / center-end;
@@ -347,15 +396,19 @@ html, body {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2rem;
-  margin: 7rem 0;
+  margin: 6rem 0;
   align-items: center; }
   .contact__details, .contact__company, .contact__opening {
+    height: 100%;
     border-radius: 2px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
     font-size: 1.7rem;
     padding: 2rem;
     color: #fff;
     background-color: rgba(17, 45, 78, 0.9); }
+  .contact__link {
+    text-decoration: none;
+    color: #fff; }
   .contact__header {
     margin-bottom: 1rem;
     text-align: center; }
@@ -382,7 +435,7 @@ html, body {
   overflow: hidden;
   padding-bottom: 56.25%;
   position: relative;
-  height: 0; }
+  height: 100%; }
 
 .map-responsive iframe {
   left: 0;
@@ -396,6 +449,8 @@ html, body {
   grid-column: full-start / full-end;
   grid-row: 4 / 5;
   padding: 8rem; }
+  .footer__testemp {
+    font-weight: 900; }
 
 .nav {
   list-style: none;
@@ -431,22 +486,21 @@ html, body {
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 7rem;
-  margin: 7rem 0;
-  align-items: center; }
+  grid-gap: 0rem;
+  margin: 6rem 0;
+  align-items: start; }
   .item__display {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, minmax(min-content, 14rem));
+    grid-template-rows: 1fr repeat(5, minmax(min-content, 14rem));
     grid-gap: 2rem;
     border-radius: 2px;
     font-size: 1.7rem;
-    padding: 1rem;
     color: #fff; }
     @media only screen and (min-width: 62.5em) {
       .item__display {
         grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: 1fr 1fr; } }
+        grid-template-rows: 1fr min-content min-content; } }
   .item__title, .item__contact, .item__material--1, .item__material--2 {
     padding: 2rem;
     display: flex;
@@ -455,21 +509,21 @@ html, body {
     justify-content: flex-start;
     border-radius: 2px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
-    background-color: rgba(17, 45, 78, 0.73); }
+    background-color: #112d4e; }
   .item__img {
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     width: 100%;
     border-radius: 2px; }
     @media only screen and (min-width: 62.5em) {
       .item__img {
         grid-column: 1 / 5;
-        grid-row: 1 / 2; } }
+        grid-row: 2 / 3; } }
   .item__title {
-    grid-row: 1 / 2; }
+    grid-row: 2 / 3; }
   .item__material--1 {
-    grid-row: 4 / 5; }
+    grid-row: 6 / 7; }
   .item__material--2 {
-    grid-row: 3 / 4; }
+    grid-row: 4 / 5; }
   .item__header--2 {
     padding: 2rem 0; }
   .item__header--4 {
@@ -477,23 +531,13 @@ html, body {
   @media only screen and (min-width: 62.5em) {
     .item__title {
       grid-column: 5 / span 5;
-      grid-row: 1 / 2; }
+      grid-row: 2 / 3; }
     .item__contact {
       grid-column: 1 / span 3;
-      grid-row: 2 / 3; }
+      grid-row: 3 / 4; }
     .item__material--1 {
       grid-column: 4 / span 3;
-      grid-row: 2 / 3; }
+      grid-row: 3 / 4; }
     .item__material--2 {
       grid-column: 7 / span 3;
-      grid-row: 2 / 3; } }
-  .item__bg {
-    z-index: -100;
-    background-image: linear-gradient(rgba(63, 114, 175, 0.73), rgba(63, 114, 175, 0.73)), url(../img/dark-warehouse-small.jpg);
-    background-size: cover;
-    background-position: center;
-    grid-row: 2 / 4;
-    grid-column: 1 / -1; }
-    @media (min-resolution: 192dpi) and (min-width: 37.5em) {
-      .item__bg {
-        background-image: linear-gradient(rgba(63, 114, 175, 0.73), rgba(63, 114, 175, 0.73)), url(../img/dark-warehouse.jpg); } }
+      grid-row: 3 / 4; } }

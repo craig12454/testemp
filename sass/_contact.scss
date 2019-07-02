@@ -4,18 +4,24 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
-    margin: 7rem 0;
+    margin: 6rem 0;
     align-items: center;
 
     &__details,
     &__company,
     &__opening {
+        height: 100%;
         border-radius: 2px;
         box-shadow: 0 1.5rem 4rem rgba(#000, .40);
         font-size: 1.7rem;
         padding: 2rem;
         color: $color-white;
         background-color: rgba($color-secondary-dark, 0.90);
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
     }
 
     &__header {
@@ -53,7 +59,7 @@
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
-    height:0;
+    height: 100%;
 }
 .map-responsive iframe{
     left:0;
