@@ -16,19 +16,21 @@
     &__title {
         font-size: 6rem;
         display: grid;
-        grid-gap: 0.2em;
     }
 
     &__logo {
         text-decoration: none;
         color: $color-secondary-dark;
         width: 30rem;
+        @media only screen and (max-width: $bp-small) {
+            width: 25rem;
+        }
     }
 
     &__sub {
         color: $color-secondary;
         @media only screen and (max-width: $bp-small) {
-            display: none;
+            font-size: 1.3rem;
         }
     }
 
@@ -150,7 +152,7 @@
             align-items: center;
             justify-content: space-evenly;
             position: absolute;
-            top: 25%;
+            top: 33.33%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -159,7 +161,7 @@
     
         &__item {
             margin: 1rem;
-            width: 33%;
+            width: 70%;
         }
     
         &__link {
