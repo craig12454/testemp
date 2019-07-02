@@ -3,12 +3,9 @@
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 7rem;
+    grid-gap: 2rem;
     margin: 7rem 0;
     align-items: center;
-    //box-shadow: 0 1.5rem 4rem rgba(#000, .15);
-
-    
 
     &__details,
     &__company,
