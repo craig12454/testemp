@@ -116,10 +116,12 @@ html, body {
   .about__title {
     justify-self: center;
     align-self: center;
-    font-size: 3rem;
     padding: 2rem 0.5rem;
     font-family: "Space Mono", monospace;
     color: #f9f7f7; }
+    @media only screen and (min-width: 50em) {
+      .about__title {
+        font-size: 3rem; } }
   .about__bg {
     z-index: -100;
     background-image: linear-gradient(rgba(63, 114, 175, 0.73), rgba(63, 114, 175, 0.73)), url(../img/power-tool-outside-small.jpg);
