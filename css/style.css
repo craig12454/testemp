@@ -243,20 +243,19 @@ html, body {
       align-items: center;
       justify-content: space-evenly;
       position: absolute;
-      top: 50%;
+      top: 25%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
       width: 100%; }
     .navigation__item {
-      margin: 1rem; }
+      margin: 1rem;
+      width: 33%; }
     .navigation__link:link, .navigation__link:visited {
       font-size: 3rem;
       padding: 1rem 2rem;
       color: #fff;
       transition: all .4s;
-      border-bottom: 1px solid #112d4e; }
-    .navigation__link:hover {
       background-color: #112d4e; }
     .navigation__button:hover .navigation__icon::before {
       top: -1rem; }

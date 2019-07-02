@@ -150,7 +150,7 @@
             align-items: center;
             justify-content: space-evenly;
             position: absolute;
-            top: 50%;
+            top: 25%;
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
@@ -159,6 +159,7 @@
     
         &__item {
             margin: 1rem;
+            width: 33%;
         }
     
         &__link {
@@ -168,10 +169,6 @@
                 padding: 1rem 2rem;
                 color: $color-white;
                 transition: all .4s;
-                border-bottom: 1px solid $color-secondary-dark;
-            }
-
-            &:hover {
                 background-color: $color-secondary-dark;
             }
         }
