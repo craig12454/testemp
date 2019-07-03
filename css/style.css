@@ -184,7 +184,7 @@ html, body {
     background-color: rgba(255, 255, 255, 0.2); }
   .navigation__checkbox, .navigation__icon, .navigation__background, .navigation__button {
     display: none; }
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 62.5em) {
     .navigation__button {
       display: block;
       background-color: #112d4e;
@@ -233,6 +233,7 @@ html, body {
       opacity: 1;
       width: 100%; }
     .navigation__nav {
+      display: none;
       height: 100vh;
       position: fixed;
       top: 0;
